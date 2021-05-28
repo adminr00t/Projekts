@@ -1,0 +1,9 @@
+Web Programming
+    What is CGI?
+        Common Gateway Interface -> set of standards that define how information is exchanged between the web server and a custom script
+        Specs maintained by the NCSA, defining the specs as such:
+            Comman Gateway Interface is a standard for external gateway programs to Interface with information servers such as HTTP servers
+            Current version is CGI/1.1 with CGI/1.2 in development
+
+    Web Browsing
+        

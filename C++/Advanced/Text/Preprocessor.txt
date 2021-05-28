@@ -1,0 +1,44 @@
+Preprocessor
+    The directives, which gives instructions to the compiler to preprocess the information before actual compilation starts
+    All preprocessor directives begin with hashtag (#), with only whitespace characters appearing before a directive on a line
+    Directives are not statements, thus do not need a semicolon (;)
+    There are a number of directives supported including but not limited to:
+        #include
+        #define
+        #if
+        #else
+        #line
+
+    The #define Preprocessor
+        Creates Symbolic constants called Macros. The general form is:
+            #define macro-name replacement text
+        All subsequent occurances of the macro in that file will be replaced by the replacement text before compilation
+
+    Function-like Macros
+        #define can be used to define a macro. See Preprocessor.cpp for example
+    
+    Conditional Compilation
+        Directives can be used to compile selective portions. This is called Conditional Compilation
+        The conditional preprocessor construct is structured like thge "if" strucutre:
+            #ifndef NULL
+                #define NULL 0
+            #endif
+        Can compile a program for debugging purposes. Can turn on or off debugging using a single macro:
+            #ifdef DEBUG
+                cerr << "Variable x = " << x << endl;
+            #endif
+        This causes the cerr statement to be compiled if the symbolic constant DEBUG has been defined before.
+        Can use #if 0 to comment out a portion of code:
+            #if 0
+                code prevented from compiling
+            #endif
+
+    The # and ## Operators
+        # causes a replacement-text token to be converted to a string surrounded by quotes
+        ## is used to concatenate two tokens
+
+    Predefined Macros
+        __LINE__ -> contains the current line number
+        __FILE__ -> contains the current file path
+        __DATE__ -> contains a string of form month/day/year
+        __TIME__ -> contains a string of form hour:minute:second

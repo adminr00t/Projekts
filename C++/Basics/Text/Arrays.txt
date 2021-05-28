@@ -1,0 +1,20 @@
+Arrays
+    Stores a fixed-sized sequential collection of elements of the same type.
+    Instead of declaring individual variables, you declare one array variable.
+    A specific elements of in an array is accessed by a index
+
+Declaring Arrays
+    Single Dimension Array:
+        type arrayName [arraySize];
+    where arraySize must be a integer constant greater than 0 and type can be any data type
+
+Initializing Arrays & Accessing Elements 
+    See Arrays.cpp for example
+
+Arrays in C++
+    few important concepts:
+        1. Multi-dimentsional Arrays - simplest form is a 2D array
+        2. Pointers to an array - can generate a pointer to the first element of an array by specifying the array name without an index
+        3. Passing arrays to functions - can pass a pointer to an array to a function
+        4. Return array from functions - allows a function to return an array
+        

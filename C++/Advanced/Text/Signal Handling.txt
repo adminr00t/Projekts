@@ -1,0 +1,20 @@
+Signal Handling
+    Signals are interrupts delivered to a process by the OS, terminating a program prematurely
+    There are signals that catch a program and take appropriate actions based on the signal:
+        SIGABRT -> Signal Abort. Terminates the program 
+        SIGFPE -> Erroneous Artimetic Operation (Dividing by 0, operation resulting in overflow)
+        SIGILL -> Detection of an illgal instruction 
+        SGINT -> Receipt of an interactive attention signal
+        SIGSEGV -> An invalid access to storage
+        SIGTERM -> A termination request sent to the program
+    
+    The signal() Function
+        Used to trap unexpected events. Syntax:
+            void (*signal (int sig, void (*func)(int))) (int);
+        This receives two areguments, first is an integer which represents signal number, the second is a pointer to the signal-handling function
+        For example, see SignalHandling.cpp
+
+    The raise() Function
+        Generate signals by raise(), which takes a integer signal number as an argument. Syntax:
+            int raise (signal sig);
+        sig is the signal number to send to any of the signals. see SignalHandling.cpp for example

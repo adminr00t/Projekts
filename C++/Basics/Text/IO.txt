@@ -1,0 +1,24 @@
+Input/Output
+    IO occurs in streams, sequences of bytes. If bytes flow from a device to main memory, its called a input operation. if bytes flow the other way, its an output operation
+
+    IO Library Header Files
+        IO headers that are important:
+            1. <iostream> -> defines cin (standard input), cout (standard output), cerr (unbuffered standered error stream) and clog (buffered standard error stream) objects
+            2. <iomanip> -> Declares services useful for performing formatted IO with so-called parameterized stream manipulators, such as setw and setprecision
+            3. <fstream> -> Declares services for user-controlled file processing
+
+    Standard Output Stream (cout)
+        cout is an instance of ostream. Said be connected to the standard output device, which is the display screen.
+        Used in conjunction with stream inserton operatior, <<.
+
+    Standard Input Stream (cin)
+        cin is an instance of the istream class. cin is said to be attached to the standard input device, usually the keyboard
+        Used in conjunction with the stream extraction operatior, >>.
+
+    Standard Error Stream (cerr)
+        cerr is an instnace of ostream class. Said to be attached to the standard error device, the display screen, but cerr is un-buffered and each stream insertion to cerr
+        causes its output to appear immediately. Used in conjunction with the stream insertion operator, <<.
+
+    Standard Log Stream (clog)
+        clog is an instance of the ostream class. Said to be attached to the standard error device, which is the display screen, but clog is buffered, meaning each insertion
+        to clog could cause its output to be held in a buffer until the buffer is filled or flushed

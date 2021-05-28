@@ -1,0 +1,31 @@
+Classes and Objects
+    Classes are used to specify the form of an object, combing data representation and methods for manipulating data into one package.
+    Data and Functions of a Class are called Members.
+
+    Class Definitions
+        Defining a Class defines a blueprint for a data type. It specifies what an object of the class will consist of and what operations can be performed on such an object.
+        Starts with the keyword "class", followed by the class name and the class body enclosed in curly braces. A class definition must be followed with a ;
+        The keyword "public", "private" or "protected" determines the access attributes of the class members.
+            Public -> accessed from anywhere outside the class within the scope of the object. Can be accesed directly by using direct member access operator (.)
+            Private -> cannot be accessed or viewed outside of the class. Cannot be accesed directly by using direct member access operator (.)
+            Protected -> similar to private, but can be accessed in child classes (derived classes). Cannot be accesed directly by using direct member access operator (.)
+
+    Defining Objects
+        Provides the blueprint for objects. Declaring objects of a class is the same sort of declartation used for variables
+
+    Accessing Data Members
+        Accesed using the direct member access operator (.)
+
+    Example
+        See Classes&Objects.cpp
+
+    Further Concepts
+        1. Class Member Functions -> A member function of a class is a function that has its definition within the class definition
+        2. Class Access Modifiers -> Class members can be defined as public, private or protexted. Members are assumed to be private by default
+        3. Constructor and Destructor -> Constructor is a Special Function that is called when a new object is created. A Destructor is the opposite
+        4. Copy Constructor -> Creates a object by initializing it with a object of the same class
+        5. Friend Functions -> A friend function is permitted full access to private and protected members of a class
+        6. Inline Functions -> the compiler tries to exapnd the code in the body of the function in place of a call to the function
+        7. this Pointer -> Every object has a special pointer 'this' which points the the object itself
+        8. Pointer to Classes -> Done exactly the same way a pointer to a structure is
+        9. Static Members of a class -> Both data and function members can be declared as static

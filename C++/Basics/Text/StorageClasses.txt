@@ -1,0 +1,10 @@
+Storage Classes
+    Defines the visibility and life-time of varaibles and/or functions within a program
+    They precede the type that they modify
+
+    Classes:
+        auto - the default storage class, can only be used within functions
+        register - used to define local variables that should be stored in a register instead of RAM
+        static - instructs the compiler to keep a local variable in existence during the life-time of the program
+        extern - used to give a reference of a global variabale that is visible to ALL program files
+        mutable - applies to only class objects. A mutable member can be modified by a const member function

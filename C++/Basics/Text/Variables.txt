@@ -1,0 +1,20 @@
+Variable Definition
+    Usage: type variable_list;, type variable_name = value;
+    Example: int i, j, k;, int i = 1
+
+Varibale Declarations
+    Provides assurance to the compiler that there is one variable existing with the given type and name
+    See VariableDelaration.cpp
+    The same is followed when using functions
+
+Lvalues and Rvalues
+    Lvalue - Expressions that refer to a memory location. appears on either left or right side of an assignment. Variables are Lvalues
+    Rvalue - a data value that is stored at some address in memory. cannot have a value assigned to it, meaning it may appear on the 
+             right but not left side of an assignment. Numeric Literals are RValues\
+    
+Local Variables
+    Variables that are declared inside a function or block. Can only be used by statements within the Blocks
+
+Global Variables
+    Defined outside of all functions, usually at the top of the program. Holds their value throughout the life-time of the program.
+    Can be accessed by any function. The same name can be used for a locale and global variable, but the value of the local variable will take prefference

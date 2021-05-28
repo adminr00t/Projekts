@@ -1,0 +1,18 @@
+Modifier Types
+    Allows char, int and double data types to have modifiers preceding them. Used to alter the meaning of the base type to more precisely fit the need of various situations
+
+    Modifiers:
+        Signed - can be applied to integer base types and char or as a prefix to long/short
+        Unsigned - can be applied to integer base types and char or as a prefix to long/short
+        Long - can be applied to integer base types and double
+        Short - can be applied to integer base types
+    
+    Short Hand Notation
+        Allows short hand notation, can drop the integer type:
+            unsigned x; instead of unsigned int x;
+
+    Type Qualifiers
+        1. const - cannot be changed by program during execution
+        2. volatile - tells the compiler that a variables value may change in ways not explicitly specified by the program
+        3. restrict - initially the only means by which the object it points to can be accessed
+

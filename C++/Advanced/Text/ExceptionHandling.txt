@@ -1,0 +1,60 @@
+Exception Handling
+    An exception is a problem that arises during the execution of a program. An example of this would be dividing by 0
+    Provide a way to transfer control from on part of a program to another.
+    Handling is built on three words:
+        Throw -> a program throws an exception when a problem shows up
+        Catch -> catches the exception with an exception handler at the place in a program where you want to handle the program
+        Try -> a try block identifies a block of code for which particular exceptions wwill be activated. Followed by one or more catch blocks
+    Assuming a block causes an exception, a method catches an exception uising a combo of the try and catch keywords.
+    A try/catch block is placed around the code that might gnereate an exception, this is reffered to as protected code, and the syntax is:
+        try{
+            // protected code
+        }catch(ExceptionName e1){
+            //catch block
+        }catch(ExceptionName e2){
+            //catch block
+        }catch(ExceptionName e3){
+            //catch block
+        }
+    You can list multiple catch statements to catch different types of exceptions if the try block raises more than one exception
+
+    Throwing Exceptions
+        Exceptions can be thrown anywhere withing a code block using the throw exception. The operand of the throw statement determines a
+        type for the exception and can be any expression. The type of the result of the expression determines the type of thrown exception
+        An example of throwing an exception when dividing by zero:
+            double division(int a, int b){
+                if( b == 0){
+                    throw "Division by zero condition";
+                }
+                return (a/b);
+            }
+
+    Catching Exceptions
+        The catch block catches any exceptions. What type of exception you want to catch can be specified. This is determined by the exeception
+        declaration in parentheses following the keyword catch:
+            try{
+                //protected code
+            }catch(ExceptionName e){
+                //code to handle ExceptionName exception
+            }
+    
+    Standard Exceptions
+        Defined in <exeception> are a list of standard exceptions that can be used. These are arranged in a parent-child class hierarchy
+            std:exception -> an exception and parent class of all the standard exxceptions
+                std:bad_alloc -> this can be thrown by new
+                std:bad_cast -> can be thrown by dynamic_cast
+                std:bad_typeid -> this can be thrown by typeid
+                std:bad_exception -> this is useful device to handle unexpected exceptions
+                std:logic_failure -> an exception that theoretically can be detected by reading the code
+                    std:domain_error -> thrown when a mathematically invalid domain is used
+                    std:invaild_argument -> thrown due to invalid arguments
+                    std:length_error -> thrown when a too big std::string is created
+                    std:out_of_range -> can be thrown by the "at" method
+                std:runtime_error -> cannot theoretically cannot be detected by reading the code
+                    std:overflow_error -> thrown if a mathematical overflow occurs
+                    std:range_error -> occured when a out of range value is tried to be stored
+                    std:underflow_error -> thrown if a mathematical underflow occurs
+
+    Defining New Exceptions
+        Can define exceptions by inheriting and overriding exception class functionality.
+        The example in CatchingExceptions.cpp shows std::exception being used to implement custom exceptions

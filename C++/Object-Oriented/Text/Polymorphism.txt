@@ -1,0 +1,32 @@
+Polymorphism
+    Means having many forms, occurs with a hierarchy of inheritance-related classes
+    Depending on the type of object invoking a function, a call to a member function will cause a different function to be executed
+
+    Without virtual on Line 13
+        Output:
+            Parent Shape Area:
+            Parent Shape Area:
+        The call function is being set once as the version defined in the base class. Called Static Resolution or Static Linkage.
+
+    With virtual on Line 13
+        Output:
+            Rectangle Area:
+            Triangle Area:
+        The compiler looks at the contents of the pointer instead of its type. Since the addresses of the objects are stored in
+        *shape, the respective function is called.
+    
+    Each child class has a seperate implementation of the area() function, this is how Polymorphism is generally used.
+    Different classes with a function of the same name and/or parameters, but with differnt implementation
+
+    The Virtual Function
+        A function in a base class that is declared using the keyword virtual. Defining this is a base class, with another
+        implementation in a derived class, signals the compiler that a static linkage is not wanted.
+        What is wanted is the selction of the function to be based on the object it is called for, this is called a Dynamic
+        Linkage or Late Binding
+
+    Pure Virtual Functions
+    It is possible for a virtual function in a base class to be redefined in a derived class to suit the objects of that class.
+    However, there is no meaningful definition for the function in the base class
+    This is done by equating the function to 0 in the base class
+        virtual int area() = 0
+    This tells the compiler there is no body for the function

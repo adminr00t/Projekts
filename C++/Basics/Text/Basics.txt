@@ -1,0 +1,48 @@
+Introduction
+
+    A C++ program can be defined as a collection of objects that communicate via invoking each others methods:
+        - Objects - Has states and behaviors. Example: A dog has states (colors, name, breed) and behaviors (wagging, barking, eating). An object is a instance of a class
+        - Class - Be defined as a template/blueprint describing behaviors/states that an object of its type support
+        - Methods - Basically as behavior, a class contains many methods. Methods are where the logic is written, data is manipulated and all actions are executed
+        - Instance Variables - each object has a unique set of instance Variables. An objects state is created by the values assigned to these instance Variables
+
+    For Basic Syntax- see BasicSyntax.cpp
+
+Semicolons and Blocks in C++
+    ";" is a statement terminator, each statement must end with a ":"
+    A block is a section of code surrounded by {}
+
+White Spaces
+    White Spaces or a comment is ignored in compilers, think of these as blank lines
+
+Comments
+    denoted by //, /* */
+
+Data Types
+    Type -> Keyword -> description
+    Boolean -> bool -> stores true or false
+    Character -> char -> stores one byte 
+    integer -> int -> most natural size of an integer
+    floating point -> float -> single precision floating point value
+    Double floating point -> double -> double precision floating point value
+    Valueless -> void -> represents the absence of a type
+    wide Character -> wchar_t -> a wide character type
+
+Typedef Declarations
+    typedef gives you the ability to create a new name for existing data type
+
+Enums
+    enums declares an optional type name and a set of zero or more identifiers that can be used as values of the type
+    
+        enum enum-name {list of names} var-list;
+    
+    list of names are comma seperated, enum-name is the type name:
+        enum color {red, green, blue} c;
+        c = blue;
+    you can give the name a value, by default they have the following (0,1,2,3...)
+        enum color {red, green = 5, blue};
+    each name will be one greater than the on that precedes it (blue will = 6)
+
+
+
+

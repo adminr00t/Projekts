@@ -1,0 +1,22 @@
+Interfaces
+    Describes the behavior or capabilites of a class without committing to a particular implementation of that class.
+    Implemented using Abstract Classes. Abstract Classes should not be confused with Data Abstraction.
+
+    Abstract Classes
+        A class is made abstract by declaring at least one of its functions as a Pure Virtual function.
+        This is specified by "= 0" in place of its declaration:
+            virtual double getVolume() = 0;
+        The purpose of a ABC (Abstract Class) is to provide an appropriate base class for other classes to inherit from.
+        Cannot be used to instantiate objects, serves only as an interface. Instantiating results in compilation errors
+        If a subclass of an ABC needs to be instantiated, it has to implement each virtual function, supporting the interface
+        declared by the ABC. Failure to do so results in a compilation error
+        Classes used to instantiate objects are called Concrete Classes
+
+    Example - see AbstractClass.cpp
+
+    Designing Strategy
+        A system might use an abstract base class to provide a common and standardized interface appropriate for external applications
+        Then through inheritance, derived classes are foremd that operate similarly.
+        Public functions offered by the external applications are provided as pure virtual functions in the abstract base class.
+        Implementations of these pure virtual functions are providded in the derived classes that correspond to the specific types of 
+        applications. This architecture also allows new applications to be added to the system easily, even after it has been defined

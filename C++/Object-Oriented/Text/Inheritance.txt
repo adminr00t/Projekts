@@ -1,0 +1,39 @@
+Inheritance
+    Allows defining a class in terms of another class, making it easier to create and maintain an application.
+    Provides opportunity to reuse code functionality and fast implemention time
+    Instead of writing new data and member functions, the new class can be designated to inherit members of an existing class.
+    The existing class is called the base class and the new class is referred to as the derived class
+
+    Base and Derived Classes
+        A class inherit data and functions from multiple base classes
+        A Deriviation list is used to specify the base classes. Has the form:
+            class derived-class: access-specifier base-class
+        Where:
+            access-specifier -> one of public, priavte or protected, if not used, set to private by default
+            base-class -> name of a previously defined class
+
+    Access Control and Inheritance
+        A derived class can access all non-private members of its base class. Due to this, base-class members that should not be accessable should be declared private in the base class
+        Different Access Types:
+               Access           Public      Protected       Private
+            Same Class ->        yes          yes             yes
+            Derived Classes ->   yes          yes             no
+            Outside Classes ->   yes          no              no
+        A derived class inherits all base class methods with the following exceptions:
+            1. Constructors, destructors and copy constructors of the base class
+            2. Overloaded operators of the base class
+            3. Friend functions of the base class
+
+    Type of Inheritance
+        When deriving a class from a base class, the base class can be inherited through public, private or protected inheritance. The Type is specified by the access specifier
+        Public inheritance is most common, with private or protected rarely being used. There are rules when using the different types of inheritance:
+            1. Public Inheritance -> when deriving, public and protected members of the base class become public and protected members of the derived class. Private members are never
+                                    accessible directly, but can be accessed through calls to the public and protected members of the base class
+            2. Protected Inheritance -> When deriving from a protected base class, public and protected members become protected members of the derived class
+            3. Private Inheritance -> When deriving from a private base class, public and protected members become private members of the derived class
+
+    Multiple Inheritance
+        Can inherit members from more than one class:
+            class derived-class: access baseA, access baseB...
+        Where:
+            access -> one of public, protected or priavte and given for every base class

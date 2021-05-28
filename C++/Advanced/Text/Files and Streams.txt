@@ -1,0 +1,53 @@
+Files and Streams
+    The iostream library provides cin and cout methods for reading standard input and writing standard output
+    
+    Reading from and Writing to a File
+        ofstream -> data type, represents output file stream. Used to create and write Files
+        ifstream -> data type, represents input file stream. Used to read files
+        fstream -> data type, represents the file stream generally, has the capabilities of ofstream and ifstream. Can create, write and read files
+
+        Headers <iostream> and <fstream> must be used
+
+    Opening A File
+        either ofstream or fstream may be used to open a file for writing and ifstream is used to open a file for reading only
+        This is the standard syntax for open(), a member of fstream, ifstream and ofstream  
+            void open(const char *filename, ios::openmode mode);
+        First argument specifies name and location of the file, the second argument defines the mode in which the file should be opened
+            1. ios::app -> Appened. All output to file appened to the end
+            2. ios::ate -> Open a file for output and move the read/write control to the end of the file
+            3. ios::in -> Open a file for reading
+            4. ios::out -> open a file for writing
+            5. ios::trunc -> if the file already exists, its contents will be truncated before opening the file
+        Can combine two or more vaules by ORing (using |) them together
+            ofstream outfile;
+            outfile.open("file.dat", ios::out | ios::trunc);
+        Can open a file for reading and writing
+            fstream afile;
+            afile.open("file.dat", ios::out | ios::in)
+
+    Closing a File
+        A program automatically flushes all the streams, releases all allocated memory and closes all opened files when it terminates. But closing a file 
+        before program terminiation is always good practice. Closing can be done with
+            void close();
+        
+    Writing to a file
+        Write information to a file by using the stream insertion operator (<<)
+
+    Reading from a file
+        Read information from a file by using the stream extraction operator (>>)
+
+    Read and Write Example
+        See Read&Write.cpp
+
+    File Position pointers
+        Both istream and ostream provide functions for repositioning the file-position pointer:
+            seekg (seek get) for istream and seekp (seek put) for ostream
+        The argument for both is usually a long integer. A second argument can be specified to indicate seek direction:
+            ios::beg for positioning relative to the beginning (the default), ios::cur for relative to the current postion and ios::end for relative to the end
+        The pointer is a integer value that specifies the location in the file as a number of bytes from the files starting location.
+        Examples of positioning the "get" file-postion pointer:
+            fileObject.seekg(n); -> Position to the nth byte of fileObject (assumes ios::beg)
+            fileObject.seekg(n, ios::cur); -> Position n bytes forward in fileObject
+            fileObject.seekg(n, ios::end); -> Position n bytes from the end of fileObject
+            fileObject.seekg(0, ios::end); -> Position at the end of fileObject
+

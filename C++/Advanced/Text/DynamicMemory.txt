@@ -1,0 +1,43 @@
+Dynamic Memory
+    Memory is divided into two parts:
+        The Stack -> All variables declared inside the function will take up memory from the stack
+        The Heap -> Unused memory of the procram. Can be used to allocate the memory dynamically when the program runs
+    The amount of memory used to store a variable may not be known, however, this can be determined at runtime.
+    Memory can be allocated at run time within the heap for the variable of a given type by using a operator, returning the address of the space allocated
+    This operator is called "new". If there is no need for dynamically allocated memory, the "delete" operator can be used.
+
+    New and Delete Operators
+        The generic syntax to use the new operator to allocate dynamically for any data type is:
+            new data-type;
+        Where data-type could be any built in data type including an array or any user defined types. A pointer can be defined as double and request memory be allocated at runtime:
+            double* pvalue = NULL; // pointer intialized with null
+            pvalue = new double; //request memory for the variable
+        However, the memory may not have been allocated successfully if the free store had been used up. Thus it is good practice to check if 
+        the new operator is returning NULL, if not, display an error:
+            double* pvalue = NULL;
+            if( !(pvalue = new double)){
+                cout << "Error: Out of Memory" << endl;
+                exit(1);
+            }
+        
+        If a variable that has been dynamically allocated is no longer needed, the memory it occupies can be freed with the delete operator:
+            delete pvalue;
+
+        Example
+            An example combining the above can be found in DynamicMemory.cpp
+
+    Dynamic Memory Allocation for Arrays
+        Using the same syntax, arrays can be allocated dynamic memory:
+            char* pvalue = NULL; //pointer intialized
+            pvalue = new cahr[20]; //request memory
+        To remove:
+            delete [] pvalue; //delete array pointed to by pvalue
+        Allocation for multi-dimensional arrays:
+            double** pvalue = NULL; //pointer intialized
+            pvalue = new double [3] [4]; //allocate memory for a 3x4 array
+        Syntax for removal of multi-dimensional array:
+            delete [] pvalue;
+
+    Dynamic Memory Allocation for Objects
+        Objects are no different from simple data types. See DynamicMemory.cpp
+        

@@ -1,0 +1,29 @@
+Data Abstraction
+    Refers to providing only the needed information without presenting details
+    Relies on separation of inferface and implmentation
+    An example:
+        A TV can turn on/off, change the channel, adjust volume, add external components, but none of the internals is known
+        (how it receives signals, how it translates them and displays them). 
+    The TV separates internal implementation from the external interface
+
+    Classes provide data abstraction with sufficient public methods for the outside world.
+    A program can make the call to the sort() function without knowing what algorithm the function uses to sort the values
+    Classes are used to define Abstract Data Types (ADT). An example would be cout
+    You don't need to understand how cout works, only that the public interface and underlying implementation is free to change
+
+    Access Labels Enforce Abstract
+        Access Labels are used to define the abstract interface to the class. A class can contain zero or more access labels:
+            A public member is accessible to all parts of the program. The data abstraction view of a type is defined by its public members
+            A private member is not accesible to code that uses the class. the private sections hide the implementation from code that uses the type
+        There is no resctrictions on how many times a label can appear. Each label specifies the access level of the succeding member definitions
+        The specified access level remains in effect until the next label or closing bracket (}) is encountered
+
+    Any class with public and private members is na example of data abstraction. For example, see DataAbstraction.cpp
+
+    DataAbstraction.cpp adds numbers together and returns the sum. The public members addNum and getTotal are the interfaces to the outside world and a user needs
+    to know about them to use the class
+    The private member total is something the user doesn't need to know, but is needed for the class to operate properly
+
+    Designing Strategy
+        Abstraction seperates code into interface and implementation. So while designing, interface must keep independant of the implementation. This allows for the 
+        underlying implementation to change, but the interface would remain the same

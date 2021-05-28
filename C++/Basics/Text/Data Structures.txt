@@ -1,0 +1,44 @@
+Data Structures
+    Arrays allows you to define variables that combine several data items of the same kind, but structure allows you to combine data items of different kinds
+    Structures are used to represent a record.
+
+    Defining a Structure
+        To define a structure, you must use the struct statement. this defines a new data type, with more than one member. Format is;
+            struct [structure tag]{
+                member definition;
+                member definition;
+
+            }[one or more structure variables]
+        The structure tag is optional and each member definition is a normal variable definition. At the end of the structure definition, one or more
+        structure variables can be specified. 
+
+    Accessing Structure Members
+        Use the member access operator (.). Coded as a period between the structure variable name and structure member that is to be accessed
+        use the struct keyword to define variables fo structure type
+        See Structures.cpp for example
+
+    Structures as Function Arguments
+        Structures can be passed as Arguments just like any other variable
+
+    Pointers to Structures
+        can define pointers to structures
+            struct Books *struct_pointer;
+        can store the address of a structure variable
+            struct_pointer = &book1;
+        access the members of a structure using a pointers 
+            struct_pointer->title;
+
+    The typedef Keyword
+        easier way to define structs
+            typedef struct{
+                char title[50];
+                cher author[50];
+                char subject[100];
+                int bookId;
+            } books;
+        Now you can use the below to variables of books type without using struct keyword
+            books book1, book2;
+        can use typedef for non-structs
+            typedef long int *pint32;
+            pint32 x,y,z;
+        where x,y,z are pointers to long ints

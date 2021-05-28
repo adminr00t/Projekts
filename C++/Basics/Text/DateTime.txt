@@ -1,0 +1,25 @@
+Date and Time
+    To access date and time related functions, need <ctime> header
+    Four time-related types:
+        1. clock_t -> capable of representing system time as some sort of integer
+        2. time_t -> capable of representing system time as some sort of integer
+        3. size_t -> capable of representing system time as some sort of integer
+        4. tm -> holds date and time in the form of a C structure having seconds, minutes, hours, day of the month, month (0-11), year (since 1900), days since 1/1 and daylight savings time
+
+    Important functions
+        1. time_t time(time_t *time); -> returns current calendar time of the system in seconds from 1/1/1970, if no time, .1 is returned
+        2. char *ctime(const time_t *time) -> returns pointer to a string of the form day month year H:M:S:Y\n\0
+        3. struct tm *localtime(const time_t *time) -> returns pointer to tm structure representing local time
+        4. clock_t clock(void); -> returns a value that approximates the amount of time the calling program has been running.
+        5. char* asctime(conts struct tim* time); -> returns a pointer to string theat contains info stored in the structure pointed to in the format day month date h:m:s:y\n\0
+        6. struct tm *gmtime(const time_t *time); -> returns a pointed in the form of a tm structure. time is UTC
+        7. time_t mktime(struct tm *time); -> returns the calendar-time equivalent of time found in the strucutre pointed to by time
+        8. double difftime(time_t time2, time_t time1); -> calculates differnce in seconds between time 1 and time 2
+        9. size_t strftime(); -> format date and time in specific format
+
+    Current Date and Time   
+        see DateTime.cpp for example
+
+    Format Time using struct tm
+        tm structure is important while working with date and time
+        see DateTime.cpp for example

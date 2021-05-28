@@ -1,0 +1,25 @@
+Pointers
+    Some tasks are performed more easliy with pointers and others cannot be performed without them
+    Every variable is a memory location, which has its address defined. This can be accessed using the ampersand operator (&)
+    See Pointers.cpp for examples
+
+    What are Pointers?
+        A variable whose value is the address of another varaible. Like other varaibles, it must be declared
+            type *varName;
+        the asterisk is used to designate a variable as a pointer. Types of pointers:
+            1. int *ip -> integer pointer
+            2. double *dp -> double pointer
+            3. float *fp -> float pointer
+            4. char *ch -> character pointer
+            
+     Using Pointers
+        See Pointers.cpp
+
+    Pointers Concepts
+        1. Null pointers -> constant with a value of 0
+        2. Pointer Arithmetic -> four arithmetic operators (++, --, +, -)
+        3. Pointers vs Arrays -> there is a close relationship between pointers and Arrays
+        4. Array of Pointers -> you can define arrays to hold pointers
+        5. Pointer to pointer -> You can have a pointer on a pointer
+        6. Passing Pointers to Functions -> passing an argument by reference or address enable the passed argument to be changed in a function
+        7. Return pointer from Functions -> allows a pointer to be returned to a local value by a function

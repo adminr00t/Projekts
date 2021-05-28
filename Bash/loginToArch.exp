@@ -1,0 +1,9 @@
+#!/usr/bin/expect -f
+set timeout -1
+spawn ssh r00t@thearchitectai.com -p 42069
+
+expect "r00t@thearchitectai.com's password:"
+
+send -- "A/W5]d^vb&Ta!~pk\r"
+
+expect eof

@@ -1,0 +1,44 @@
+Constants and Literals
+    Constants refer to fixed values that the program may not alter, called literals
+    Can be any type of the basic data types, can be divided into ints, floats, chars, strings and boolean
+
+Integer Literals
+    can be a decimal, octal or hex constant. A prefix specifies the base:
+        0x/0X for hex
+        0 for octal
+        Nothing for decimal
+    can have a suffix that is a combo of U (unsigned) or L (long)
+
+Floating Point Literals
+    Has an interger, decimal point, fractional part and an expontent part
+    can represent in either decimal or exponential form or both
+    While representing using exponential form, must include interger or fractional or both parts
+        3.14159 is legal
+        31415e-5L is legal
+        510E is not legal, has an incomplete expontent
+        210f is not legal, no decimal or exponent
+        .e55 is not legal, missing integer/fraction
+
+Boolean Literals
+    A value of either true or false
+
+Character Literals
+    Enclose in single quotes. Wide character literals begin with L only (should be stored in wchar_t), else is a narrow character
+    and stored in char
+    Can be a plain character, an escape sequence ('\t') or a universal character (\u02c0')
+    Certain characters have special meaning if preceded by a backslash ('\')
+    Used to represent newline ('\n') or tab ('\t')
+
+String Literals
+    Enclosed in double quotes. Contains characters similar to character litereals: Plain characters/universal characters and escape sequences
+
+Defining Constants
+    two ways - #define preprocessor or const keyword
+    
+    The #define Preprocessor
+        #define identifier value
+            #define identifier value
+
+    The const Keyword
+        can use "const" prefix to declare constants with a spcific type
+            const type variableName = value;

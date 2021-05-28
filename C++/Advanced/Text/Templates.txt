@@ -1,0 +1,13 @@
+Templates
+    Foundation of generic programming, involving writing code in a way that it is independent of any particular type
+    Templates are blueprints or formulas for creating generic classes or functions
+    A single definition of each container, but many different kinds of containers can be defined, such as vector <int> or vector <string>
+    Can be used to define functions as well as classes
+
+    Function Template
+        General form of a template function:
+            template <class type> ret-type func-name(parameter list) {
+                body of function
+            }
+        Type -> placeholder name for a data type used by the function, name can be used within the functiuon definition.
+        See Templates.cpp for example

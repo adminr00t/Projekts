@@ -1,0 +1,47 @@
+Namespaces
+    Namespaces are important. They differentiate similar functions, classes, variables etc. This is needed because it is possible for two functions to 
+    have the same name, leaving the compiler not knowing which one is which. Using namespaces can define the context in which names are defined.
+
+    Defining a Namespace
+        Begins with the keyword namespace followed by the namespace name
+            namespace namespaceName{
+                //code
+            }
+        To call a namespace-enabled version of a function, prepend (::) the namespace:
+            name::code; //code is variable or function
+        Example
+            See Namespaces.cpp
+    
+    The "using" Directive
+        Avoid prepending namespaces with the "using namespace" directive. This tells the compiler that the following code is making use of the names
+        in the specified namespace
+        Can also be used to refer to a particular item within the namespace
+            using std::cout;
+        Code can refer to cout, but other items within the std namespace will need to be explici
+            cout << "std::endl is used with std" << std::endl;
+        Names introduced with using obey normal scope rules. The name is visible from the point of the using directive to the end of the scope. Entities with
+        the same name defined in an outer scope are hidden
+    
+    Discontiguous Namespaces
+        A namespace is a sum of its parts, the parts can be spread over multiple files
+        If one part of the namespace requires a name defined in another file, that name must be declared.
+        Writing a namespace definition either defines a new namespace or adds new elements to an existing one
+            namespace namespaceName{
+                //code declarations
+            }
+    
+    Nested Namespaces
+        You can define one namespace within another name space
+            namespace namespaceName{
+                //code declarations
+                namespace namespaceName2{
+                    //code declarations
+                }
+            }
+        Access via
+            using namespace namespaceName::namespaceName2 //access members of namespaceName2
+            using namespace namespaceName //access members of namespaceName
+        using namespaceName will make elements of namespaceName2 available in the scope. see Namespaces.cpp for Example
+        
+
+        

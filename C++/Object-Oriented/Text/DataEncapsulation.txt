@@ -1,0 +1,20 @@
+Data Encapsulation
+    Programs are composed of the following fundamental elements
+        1. Program Statements (code) -> the part of the program that performs actions and are called functions
+        2. Program Data -> the information of the program that is effected by the program functions
+
+    Encapsulation is a mechanism of bundling data and functions together, while Data Abstraction is a mechanism for 
+    exposing only interfaces and hiding implementation details.
+
+    One way encapsulation is achieved is through the use of private members in classes. Making one class a friend of another
+    exposes implementation, reducing encapsulation. The ideal is to keep as many details of each class hidden from all other classes
+    as much as possible
+
+    Data Encapsulation Example
+        Any class with public and privare members is an example of encapsulation and abstraction, see DataEncapsulation.cpp for example
+        The public members addNum and getTotal are interfaces to the outside world and are needed to be known. The private
+        member total is hidden but is needed for the class to operate
+    
+    Designing Straegy
+        Make class members private unless they are needed to be exposed, that is good encapsulation
+        Mostly applied to data members, but it applies to all members, including virtual functions

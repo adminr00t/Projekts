@@ -1,0 +1,13 @@
+Decision Making Statements
+    Requires one or more specified conditions to be evaluated/tested by the program and statements to be executed if conditions are true
+    Types:
+        1. If - if condition is true, then execute
+        2. If...else - if statement is true, execute, else, execute something else
+        3. Switch - tests a variable for equality against a list of values
+        4. Nested If Statements - ifs within ifs
+        4. Nested Switch Statements - switches within switches
+
+The ? : Operator
+    Can be used to replace if else statements
+    Usage: Exp1 ? Exp2 : Exp3;
+    Exp1 is evaluated, if true, Exp2 is evaluated then becomes the value of the expression, else Exp3 becomes the value

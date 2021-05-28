@@ -1,0 +1,19 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:/Users/joshu/Documents/Arduino/libraries/Windows_Virtual_Shields_for_Arduino/src/**",
+                "C:/Users/joshu/Documents/Arduino/libraries/ArduinoJson/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "intelliSenseMode": "msvc-x64"
+        }
+    ],
+    "version": 4
+}

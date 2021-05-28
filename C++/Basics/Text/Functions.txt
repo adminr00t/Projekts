@@ -1,0 +1,25 @@
+Functions
+    A group of statements that perform a task. 
+
+Function Definition
+    Consists of a header and a body:
+        return_type function_name(parameter_list){
+            body
+        }
+    where:
+        return_type -> a function may return a value, thus return_type is the data type of said value
+        function_name -> name of the function
+        parameter_list -> a function may require parameters. when a function is invoked, you pass a value to the parameter. Refers to the type, order and number of parameter. Optional
+        Body -> a collection of statements that define what the function does
+    For example, see function.cpp
+
+Function Arguments
+    if a function is to use arguments, it must declare variables that accept the values of the arguments these are called formal parameters. 
+    These variables behave like other local variables inside the function and are created upon entry and destroyed on exit.
+    there are ways that arguments can be passed to a function
+        1. Call by Value -> copies the value of an argument into the formal parameter
+        2. Call by Pointer -> copies the address of an argument into the formal parameter
+        3. Call by Reference -> copies the Reference of an argument into the formal parameter
+
+Default Value for Parameters
+    when defining a function, you can specify a value for a parameter, this will be used when the corresponding argument is left blank

@@ -1,0 +1,25 @@
+Maths
+    working with data usually means working with primitive data types (int, short, float and double).
+
+Defining Numbers
+    See Math.cpp for example
+
+Mathematical Operations
+    Need to include the header <cmath>
+    Types:
+        double cos(double) -> takes an angle and returns the cosine
+        double sin(double) -> takes an angle and returns the sine
+        double tan(double) -> takes an angle and returns the tangent
+        double log(double) -> takes a number and returns the natural log
+        double pow(double, double) -> first is the number to raise, second is the power you wish to raise it to
+        double hypot(double double) -> takes the legnth of two sides and returns the legnth of the hypotenuse
+        double swrt(double) -> square root of a number
+        int abs(int) -> returns the absolute value of a interger
+        double fabs(double) returns the absolute value of a decimal number
+        double floor(double) -> finds the int that is less than or equal to the argument passed
+
+Random Numbers
+    Two ways to generate random numbers:
+        1. rand() -> only returns a pseudo-random number, this creates the same random numbers every time it is run
+        2. srand() -> sets the seed of the pseudo-random number generator
+    Can set seed based on time

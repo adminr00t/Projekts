@@ -1,0 +1,91 @@
+Operators
+    A symbol that tells the compiler to perform specific mathematical or logical manipulations
+    Types:
+        1. Aritmetic
+        2. Relational
+        3. Logical
+        4. Bitwise
+        5. Assignment
+        6. Miscellaneous
+
+    Aritmetic Operators
+        Mathematical symbols:
+        + -> adds
+        - -> subtracts
+        * -> multiplies
+        / -> divides
+        % -> Modulus (remainder after integer division)
+        ++ -> increment
+        -- -> decrement
+
+    Relational Operators
+        Mathematical Realtionships:
+        == -> checks if two values are equal, true is so, false if not
+        != -> not equal, true if so, false if equal
+        > -> checks if left is greater than right value
+        < -> checks if left is less than right value
+        >= -> checks if left is greater than or equal to right value
+        <= -> checks if left is less than or equal to right value
+
+    Logical Operators
+        && -> the logical AND
+        || -> the logical OR
+        ! -> the logical NOT
+
+    Bitwise Operators
+        & -> Binary AND 
+        | -> Binary OR
+        ^ -> Binary XOR
+        ~ -> Binary Ones Compliment (flipping bits)
+        << -> Bit Shift Left (the left operand is moved left by the value of the right operand)
+        >> -> Bit Shift Left (the left operand is moved right by the value of the right operand)
+
+    Assignment Operators
+        = -> Simple Assignment operator, assigns value
+        += -> Add and Assignment, adds right operand to the left operand and assigns the result to the left operand
+        -= -> Subtract and Assignment, subtracts right operand to the left operand and assigns the result to the left operand
+        *= -> Multiply and Assignment
+        /= -> Devide and Assignment
+        %= -> Modulus and Assignment
+        <<= -> Left Shift and Assignment
+        >>= -> Right shift and Assignment
+        &= -> Bitwise AND and Assignment
+        ^= -> Bitwise XOR and Assignment
+        |= -> Bitwise OR and Assignment
+
+    Miscellaneous Operators
+        sizeof -> returns the size of a variable
+        condition -> if true, returns value
+        , -> causes a sequence of operations to be performed
+        . and (->) -> member operators, used to reference individual members of classes, structures and unions
+        Cast -> convert one data type to another
+        & -> pointer operator, returns the memory address of a variable. Usage: &var
+        * -> pointer to a variable. Usage: *var
+        //, /* */ -> Comments
+        \t, \n -> tab, new line
+        ? -> used to replace if statement. Usage: Exp1 ? Exp2 : Exp3;
+        
+    Escape Character
+        \n -> newline -> cursor moves to the beginning of the next line
+        \t -> tab -> cursor moves to the next tab stop
+        \b -> backspace -> cursor moves one space to the left
+        \r -> return -> cursor moves to the beginning of the current line (not the next line)
+        \\ -> backslash -> backslash is printed
+        \' -> single quotation -> single quotation mark is printed
+        \" -> double quotation -> double quotation mark is printed 
+
+Operator Precedence
+    Basically BOMDAS
+        -> All operations inside () are evaluated first
+        -> *, /, % are at the same level of precedence and are evaluated next
+        -> +, - are at the same level and evaluated last
+        -> Precedence
+            1. !, +, - (unary operators)
+            2. *, /, %
+            3. +, -
+            4. <, <=, <=, >
+            5. ==, !=
+            6. &&
+            7. ||
+            8. =
+

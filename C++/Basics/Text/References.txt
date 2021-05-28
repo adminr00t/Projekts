@@ -1,0 +1,20 @@
+References
+    A reference variable is an alias, another name for an existing variable. Once initialized with a variable, the var name or reference name can be called
+
+    References vs Pointers
+        Often confused with pointers. Three major differences:
+            1. Cannot have NULL references -> must always be able to assume a reference is connected to a legit piece of storage
+            2. Once initialized, it cannot be changed to refer to another object
+            3. Must be initialized when created
+    
+    Creating References
+        Think of a variable name as a label attached to the variables location in memory. A reference is a second label attached to that memory location.
+        You can access the contents through either the original name or the reference
+            int i = 17; can also be declared as int& r = i;
+        See References.cpp for example
+    
+    Uses
+        Usually used for function argument lists and return values
+        Two important subjects:
+            1. References as Parameters -> passing references as function Parameters more safely than Parameters
+            2. References as return value -> return a reference from a function like any other data type

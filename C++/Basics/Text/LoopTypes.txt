@@ -1,0 +1,18 @@
+Loop Types
+    Allows for execution of a statement or group of statements multiple times
+    Types:
+        1. While - while a condition is true, repeat
+        2. For - for x amount of times, repeat
+        3. Do... While - while loop but tests condition at the end of loop
+        4. Nested loops - loops within loops, loop-ception
+
+Loop Control Statements
+    Statements that change the loop execution
+    Types:
+        1. Break - breaks/terminates the loop cycle
+        2. Continue - skips the remainder and retest the condition
+        3. Goto - transfers control to the labeled statement
+
+Infinite Loop
+    Occurs when a condition never becomes false.
+    See infiniteLoop.cpp

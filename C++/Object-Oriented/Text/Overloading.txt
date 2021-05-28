@@ -1,0 +1,24 @@
+Overloading
+    You can specify more than 1 definition for a function name or operator in the same scope.
+    Called Function and Operator Overloading
+    An overloaded declaration is declared with the same name as the previous declaration, execpt both have different arguments and definitions
+    The compiler determines the most appropriate definition for use via comparison used to call the function/operator with parameters for specified types in the definition
+    This process is called Overload Resolution
+
+    Function Overloading
+        Can have multiple definitions for the same function name in the same scope
+        Function definition must differ from others by types and/or number of arguments
+        Cannot Overload function declaration by differing return type
+        For example, see Overloading.cpp
+
+    Operators Overloading
+        Most built-in operators can be redefined or overloaded
+        Overloaded operators are functions with special names
+        The Keyword 'operator' followed by the symbol for the operator being defined (+)
+        A overloaded operator has a retrun type and a parameter list
+        Below declares the addition operator that can be used to add two Box objects and returns the final Box object
+            Box operator+ (const Box&);
+        Overloaded operators may be defined as ordinary non-member or class member functions. 
+        Defining a non-function of a class requires two arguments for each operand to be passed
+            Box operator+(const Box&, constBox&);
+        An example showing the concept of operator overloading using a member function cna be found in Overloading.cpp
