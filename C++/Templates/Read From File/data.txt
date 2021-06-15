@@ -1,0 +1,24 @@
+Arthur King
+BSC1001
+96.5
+HD
+Belinda Moore
+BSC1002
+32.0
+F
+Carl Yong
+BSC1003
+85.2
+HD
+Dorothy Queen
+BSC1004
+75.3
+A
+Eugene Gum
+BSC4001
+15.3
+F
+Florence Jye
+BSC1005
+55.6
+C
