@@ -16,4 +16,4 @@ Tutorials, both text and code examples, of C++
 Uni and personal projects
 
 ## Java
-Literally nothing
+Currently relearning Java, so this will be updated with the most basic shit
