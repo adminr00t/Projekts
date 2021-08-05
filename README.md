@@ -9,12 +9,14 @@ Files for controlling WS2812B ARBG LED strips with Arduinos
 ### Auto Hotkey
 AHK scripts for controling various software and hardware aspects of a computer
 - quitZoom.ahk - Force quits Zoom from running in the background via ctrl+q
-- mediaContol.ahk - Controls media
-&nbsp;&nbsp;&nbsp;&nbsp; Previous - ctrl+1
-&nbsp;&nbsp;&nbsp;&nbsp; Play/Pause - ctrl+2
-&nbsp;&nbsp;&nbsp;&nbsp; Next - ctrl+3
+- mediaContol.ahk - Controls media   
+  - Previous - ctrl+1
+  - Play/Pause - ctrl+2
+  - Next - ctrl+3
 
-- brightnesControl.ahk - Controls a screens brightness [Decrease - ctrl+F5, Increase - ctrl+F6]
+- brightnesControl.ahk - Controls a screens brightness  
+  - Decrease - ctrl+F5
+  - Increase - ctrl+F6
 
 ### Bash
 A bunch of basic, mostly useless scripts
