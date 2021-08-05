@@ -1,0 +1,8 @@
+Syntax of AHK
+
+    ;, /* */ -> Comments, can be added to the end of a line
+        run Notepad ; This is a comment
+        ; this is a comment
+        /*
+        this is a multiline comment
+        */

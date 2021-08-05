@@ -1,0 +1,6 @@
+Auto Hotkey uses symbols as prefixes to represent keys on a keyboard.
+
+    # -> Windows key
+    ! -> Alt key
+    ^ -> Ctrl key
+    + -> Shift key
