@@ -14,9 +14,7 @@ AHK scripts for controling various software and hardware aspects of a computer
 &nbsp;&nbsp;&nbsp;&nbsp; Play/Pause - ctrl+2
 &nbsp;&nbsp;&nbsp;&nbsp; Next - ctrl+3
 
-- brightnesControl.ahk - Controls a screens brightness
-&nbsp;&nbsp;&nbsp;&nbsp; Decrease - ctrl+F5
-&nbsp;&nbsp;&nbsp;&nbsp; Increase - ctrl+F6
+- brightnesControl.ahk - Controls a screens brightness [Decrease - ctrl+F5, Increase - ctrl+F6]
 
 ### Bash
 A bunch of basic, mostly useless scripts
