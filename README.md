@@ -15,8 +15,8 @@ AHK scripts for controling various software and hardware aspects of a computer
   - Next - ctrl+alt+ right arrow
 
 - brightnesControl.ahk - Controls a screens brightness  
-  - Decrease - ctrl+F5
-  - Increase - ctrl+F6
+  - Decrease - ctrl+alt+F5
+  - Increase - ctrl+alt+F6
 
 ### Bash
 A bunch of basic, mostly useless scripts

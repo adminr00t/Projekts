@@ -218,5 +218,5 @@ BrightnessSetter_new() {
 }
 BS := new BrightnessSetter()
 
-^F5::BS.SetBrightness(-10)
-^F6::BS.SetBrightness(10)
+^!F5::BS.SetBrightness(-10)
+^!F6::BS.SetBrightness(10)
