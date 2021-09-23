@@ -4,7 +4,7 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**"
-                // removed identifiable content
+                // removed identifiable content, will not work. Enter path to fastLED library
                 
             ],
             "defines": [
