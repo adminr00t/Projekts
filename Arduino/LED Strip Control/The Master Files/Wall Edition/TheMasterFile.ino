@@ -177,7 +177,7 @@ void loop()
     // EC420();
     // EC421();
     // EC422();
-    EC5(50);
+    // EC5(50);
 
     // Beat Detection Mood Lighting
     // CyberBeats(patternOfSynth, synthFlame);
@@ -187,7 +187,7 @@ void loop()
     // pbBD(PartyColors_p, startIndex);
 
     // Color Patterns
-    // colorPatterns(patternOfSynth, startIndex, 200);
+    colorPatterns(patternOfSynth, startIndex, 200);
     // SynthRain();
     // LightBars();
     // SafeSpace();
