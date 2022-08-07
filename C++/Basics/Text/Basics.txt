@@ -9,7 +9,7 @@ Introduction
     For Basic Syntax- see BasicSyntax.cpp
 
 Semicolons and Blocks in C++
-    ";" is a statement terminator, each statement must end with a ":"
+    ";" is a statement terminator, each statement must end with a ";"
     A block is a section of code surrounded by {}
 
 White Spaces
