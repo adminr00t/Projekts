@@ -1,0 +1,1 @@
+Requires FastLED library
