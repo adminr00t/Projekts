@@ -1,18 +1,20 @@
-#string generator
-#objective: generate a string (user-given length) of random numbers, letters (caps and lowercase) and special characters
-
 import string
 import secrets
+import random
 
-alphabet = string.ascii_letters + string.digits + string.punctuation
-while True:
-    password = ''
+numbers = string.digits
+uppercase = string.ascii_uppercase
+lowercase = string.ascii_lowercase
+specChars = string.punctuation
 
-    for i in range(20):
-        password += ''.join(secrets.choice(alphabet))
-    if (any(char.islower() for char in password)
-            and any(char.isupper() for char in password)
-            and sum(char.isdigit() for char in password) >= 6):
-            break
+generatedPwd = ''
+generatedPwd = ''.join([secrets.choice(uppercase) for i in range(4)] +
+            [secrets.choice(lowercase) for i in range(4)] +
+            [secrets.choice(numbers) for i in range(4)] +
+            [secrets.choice(specChars) for i in range(4)])
+
+jumbler = list(generatedPwd)
+random.shuffle(jumbler)
+password = ''.join(jumbler)
         
 print("\nNew password is:", password)
