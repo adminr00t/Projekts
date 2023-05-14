@@ -1,0 +1,23 @@
+Password Generator Requirements Analysis
+
+Minimal Viable Product
+
+    User Input
+        -> Desired length
+        -> Amount of capital letters
+        -> Amount of lowercase letters
+        -> Amount of numbers
+        -> Amount of special characters
+
+    -> Generates a password of random chars that meets or exceeds desired length
+
+Future Updates
+    -> Find a textfile online containing say the 5k or 10k most common english words
+    -> Filer it so only 3 or 4 letters and up is contained
+    -> And use the horse_staple_battery technique described by XKCD to generate a password with capitalisation, symbols and numbers as required
+    -> https://xkcd.com/936/
+
+General Requirements
+    -> Defensive programming
+    -> Documentation - Jupyter Notebook docs
+    -> Use functions
