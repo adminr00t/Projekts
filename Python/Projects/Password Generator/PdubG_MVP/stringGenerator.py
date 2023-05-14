@@ -6,10 +6,13 @@ import secrets
 
 alphabet = string.ascii_letters + string.digits + string.punctuation
 while True:
-    password = ''.join(secrets.choice(alphabet) for i in range(15))
+    password = ''
+
+    for i in range(20):
+        password += ''.join(secrets.choice(alphabet))
     if (any(char.islower() for char in password)
             and any(char.isupper() for char in password)
             and sum(char.isdigit() for char in password) >= 6):
             break
-
-print(password)
+        
+print("\nNew password is:", password)
