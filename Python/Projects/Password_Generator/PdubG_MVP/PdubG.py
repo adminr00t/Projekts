@@ -1,6 +1,6 @@
 
 # PdubG - Password Generator
-# Randomly generates a cryptographically safe password with user-defined parameters
+# Generates a Password or a Passphrase based on what the user wants
 # Pydocs Referenced:
 # Secrets - https://docs.python.org/3/library/secrets.html
 # String - https://docs.python.org/3/library/string.html
@@ -13,7 +13,7 @@ import secrets
 import random
 
 def userInput():
-    "This function grabs the Desired Length, # of capital and lowercase letters, numbers and special chars from the user"
+    "This function grabs initial user input for deciding which generation technique to take"
 
     decision = input("Would you like to generate a password (string of chars) or passphrase (string of words): ")
 
@@ -26,6 +26,7 @@ def userInput():
     return
 
 def passwordGen():
+    "This function randomly generates a cryptographically safe password with user-defined parameters"
     while True:
         try:
             capLetters = int(input("How many Uppercase letters should the PWD contain? "))
@@ -63,7 +64,7 @@ def passwordGen():
 
 
 def passphraseGen():
-
+    "This function generates a passphrase using a list of words that are 5< letters in length. Separated by _"
     wordCount = int(input("How many words would you like there to be? "))
 
 
