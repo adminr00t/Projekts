@@ -1,7 +1,7 @@
 # All of my Projects
 
 ## Contents  
-A collection of Bash, HTML/CSS, C++ and other languages
+A collection of C++, HTML/CSS, Python and other languages I have picked up over the years
 
 ### Arduino Control
 Files for controlling WS2812B ARBG LED strips with Arduinos  
@@ -19,7 +19,7 @@ AHK scripts for controling various software and hardware aspects of a computer
   - Increase - ctrl+alt+F6
 
 ### Bash
-A bunch of basic, mostly useless scripts
+A bunch of basic scripts
 
 ### C++
 Tutorials, both text and code examples, of C++
@@ -28,4 +28,9 @@ Tutorials, both text and code examples, of C++
 Uni and personal projects
 
 ### Java
-Currently relearning Java, so this will be updated with the most basic shit
+TBL
+
+### Python
+
+#### PdubG
+Random Password Generator. Uses the Secrets, String and Random packages.
