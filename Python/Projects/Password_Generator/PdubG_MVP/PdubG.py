@@ -5,7 +5,7 @@
 # Secrets - https://docs.python.org/3/library/secrets.html
 # String - https://docs.python.org/3/library/string.html
 # Random - https://docs.python.org/3/library/random.html
-# Authored by adminr00t, all rights reserved
+# Authored by adminr00t
 
 
 import string
