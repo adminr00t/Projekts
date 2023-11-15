@@ -2,21 +2,14 @@ import time, board, neopixel
 from ulab import numpy as np
 from random import randint
 
-
-import fire_leds
-
 YELLOW = (255, 150, 0)
 GREEN = (0, 255, 0)
 CYAN = (0, 255, 255)
 BLUE = (0, 0, 255)
 PURPLE = (180, 0, 255)
-fire_color = 0xff5500
-fire_fade = (-2,-2,-2)  # how much to fade R,G,B each udpate
 
 num_leds = 375
 led_pin = board.GP0
-min = 0
-max = 255
 
 leds = neopixel.NeoPixel(led_pin, num_leds, brightness=0.4, auto_write=True)
 leds_np = np.array(leds, dtype=np.int16)  # numpy working copy of LED data

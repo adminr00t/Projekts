@@ -1,13 +1,5 @@
-# code.py for fire1 -- demonstrate using the "fire_leds" library
-# 10 Oct 2022 - @todbot / Tod Kurt
-# Drop this code.py and fire_leds.py into your CIRCUITPY drive
-# part of https://github.com/todbot/circuitpython_led_effects
-
 import time, board, neopixel, rainbowio, random
 from ulab import numpy as np
-
-
-import fire_leds
 
 YELLOW = (255, 150, 0)
 GREEN = (0, 255, 0)
@@ -17,7 +9,7 @@ PURPLE = (180, 0, 255)
 fire_color = 0xff5500
 fire_fade = (-2,-2,-2)  # how much to fade R,G,B each udpate
 
-num_leds = 64 * 1
+num_leds = 375
 led_pin = board.GP0
 fade_by = -3
 fire_color = 0xff6600
@@ -26,33 +18,6 @@ leds = neopixel.NeoPixel(led_pin, num_leds, brightness=0.4, auto_write=True)
 leds_np = np.array(leds, dtype=np.int16)  # numpy working copy of LED data
 
 fade_by = np.array( (-3,-3,-3), dtype=np.int16 )
-
-
-# make up our fire
-#fire_leds = fire_leds.FireLEDs(leds, fade_by=fire_fade, fire_rate=0.1 )
-fire_leds = fire_leds.FireLEDs(leds, fade_by=fire_fade)
-
-def color_chase(color, wait):
-    for i in range(num_leds):
-        leds[i] = color
-        time.sleep(wait)
-        leds.show()
-    time.sleep(0.5)
-
-def fadeInOut(color, initialBrightness, targetBrightness, wait):
-    for x in range(num_leds):
-        leds[x] = color
-        leds.brightness = initialBrightness
-        time.sleep(wait)
-        leds.show()
-    # time.sleep(0.6)
-    
-    for y in range(num_leds, 0, -1):
-        for z in range(initialBrightness, targetBrightness, -1):
-            leds.brightness = z
-            time.sleep(wait)
-            leds.show()
-
 
 OFF = (0,0,0)
 colorDict = {
