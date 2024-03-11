@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- TAB TITLE -->
+    <title>
+        Welcome to The Architect A.I.
+    </title>
+
+    <!-- METADATA -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height-device-height, initial-scale=1.0">
+
+    <!-- STYLESHEET -->
+    <link rel="stylesheet" href="./Subdirectories/Styling/ArchStyle.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"> -->
+    <link rel="shortcut icon" href="https://i.imgur.com/rdvqw6t.png">
+
+    <!-- INTIAL LOADING SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+    <!-- PAGE SPECIFIC STYLING -->
+    <style>
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://i.imgur.com/V0pIIjX.png");
+            min-height: 100%;
+            background-position: center;
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            font-family: 'Major Mono Display', monospace;
+            font-size: 22px;
+        }
+    </style>
+
+    
+</head>
+
+<body>
+    <header>
+        <!-- SITE NAVIGATION-->
+        <nav class="navigation">
+            <img class="logo" src="https://i.imgur.com/lE7nBOM.png" alt="BrainLogo">
+            <section class="dropdown">
+                <a class="active" href="ARCHIndex.html">Home</a>
+                <a href="./Subdirectories/ExtraPages">Further Information</a>
+                <a href="./Subdirectories/Maps/risk-map-ided.html">Interactive Map</a>
+                <a href="./Subdirectories/Art/ascii-art.html">Art</a>
+                <a href="./Subdirectories/Archives/ARCHsite.html">Archived</a>
+                <a href="./Subdirectories/CapsFiles">Caps' Files</a>
+            </section>
+        </nav>
+
+    </header>
+
+    <!-- PARTICLES BACKGROUND -->
+    <div id="particles-js"></div>
+
+
+
+    <!-- TITLE -->
+    <section class="title">
+        <h1>
+            Architect Artifical Intelligence
+        </h1>
+    </section>
+
+    <!-- INFORMATION -->
+    <article class="intro"></article>
+
+    <!-- INTERACTION SCRIPTS -->
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.json loaded...');
+        });
+    </script>
+
+    </html>

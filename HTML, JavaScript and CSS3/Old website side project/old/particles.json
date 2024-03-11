@@ -1,0 +1,76 @@
+{
+  "particles":{
+    "number":{
+      "value":75
+    },
+    "color":{
+      "value":"#00e39b"
+    },
+    "shape":{
+      "type":"circle",
+      "stroke":{
+        "width":1,
+        "color":"#cf0a3b"
+      },
+      "image":{
+        "src":"https://i.imgur.com/61spOTC.png"
+      }
+    },
+    "opacity":{
+      "value":0.5,
+      "random":true,
+      "anim":{
+        "enable":true,
+        "speed":1
+      }
+    },
+    "size":{
+      "value": 10,
+      "random":true,
+      "anim":{
+        "enable": true,
+        "speed":10
+      }
+    },
+    "line_linked":{
+      "enable": true,
+      "distance": 120,
+      "color":"#ba0761",
+      "width":1
+    },
+    "move":{
+      "enable":true,
+      "speed":2,
+      "direction":"none",
+      "straight":false,
+      "attract": {
+        "enable": true,
+        "rotateX": 600,
+        "rotateY": 1200
+      }
+    }
+    
+  },
+  "interactivity":{
+    "events":{
+      "onhover":{
+        "enable":true,
+        "mode":"grab"
+      },
+      "onclick":{
+        "enable": true,
+        "mode":"push"
+      }
+    },
+    "modes":{
+      "repulse":{
+        "distance":50,
+        "duration":0.4
+      },
+      "bubble":{
+        "distance":100,
+        "size":10
+      }
+    }
+  }
+}
