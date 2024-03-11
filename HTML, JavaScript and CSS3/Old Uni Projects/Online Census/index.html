@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<link rel="stylesheet" href="./subdirectories/styling/indexStyle.css" />
+
+<head>
+  <title>
+    Australian Census Questionnaire
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- JQUERY -->
+<script type="text/javascript" src="./subdirectories/Scripts/jquery-3.5.1.min.js"></script>
+<script type="text/javascript" src="./subdirectories/Scripts/functions.js"></script>
+</head>
+
+<body>
+  <form method="POST" action="https://tau.usq.edu.au/courses/CSC2406/reflect.php">
+    
+    <!-- LOGO -->
+    <img src="https://tau.usq.edu.au/courses/CSC2406/Assignments/ABS_Logo.svg">
+
+    <!-- PROGRESS -->
+    <label id="barLabel">Overall Progress:</label><br>
+    <progress max=100 value="0" id=bar></progress>
+
+    <!-- #region Dwelling Information -->
+    <section id="address" >
+      <h1 id="head">1. Address of Dwelling</h1>
+      <hr>
+      <br>
+      <label id="number">Apartment/Flat/Unit Number (if any)</label><br>
+      <input type="text" id="unitNumber" maxlength="5" placeholder="12345" required><br><br>
+
+      <label id="number">Street Number</label><br>
+      <input type="text" id="unitNumber" maxlength="5" placeholder="12345" required><br><br>
+
+      <label id="number">Street Name</label><br>
+      <input type="text" id="name" placeholder="StreetCred" required><br><br>
+
+      <label id="number">Suburb</label><br>
+      <input type="text" id="name" placeholder="Suburb" required><br><br>
+
+      <label id="number"></label>State/Territory<br>
+      <input type="text" id="state" maxlength="3" placeholder="QLD" required><br><br>
+
+      <label id="number">Postcode</label><br>
+      <input type="text" id="Postcoder" placeholder="1234" required><br><br>
+
+      <label id="number">Property/Building Name (if any)</label><br>
+      <input type="text" id="name" placeholder="Building Name" style="background-color: white;"><br><br>
+
+      <button type="button" onclick="DwelRev()">Help</button>
+      <button type="button" onclick="RevAddInf(); incr()">Next</button>
+
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region PERSONAL INFORMATION QUESTIONNAIRE -->
+    <section id="perInfo" style="display: none;">
+      <h1 id="head">2. Personal Information</h1>
+      <hr>
+      <br>
+      <label for="fname">Given Name:</label><br>
+      <input type="text" id="fname" name="fname" placeholder="John" required><br><br>
+
+      <label for="fname">Family Name:</label><br>
+      <input type="text" id="lname" name="lname" placeholder="Doe" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" placeholder="JohnDoe@email.com" required><br><br>
+
+      <label for="tele">Phone Number:</label><br>
+      <input type="tel" id="tel" name="tel" placeholder="04 12345678" required><br><br>
+
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="dob" value="" required><br><br>
+
+      <label for="Gender">Select your gender:</label><br>
+      <select name="gender" id="genderSelecter" form="genform" required>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select><br><br>
+
+      <label for="cob">Country of Birth</label><br>
+      <select id="cob" required>
+        <option value="Australia">Australia</option>
+        <option value="New Zealand">New Zealand</option>
+        <option value="Fiji">Fiji</option>
+        <option value="Soloman Islands">Soloman Islands</option>
+        <option value="Papa New Guinea">Papa New Guinea</option>
+        <option value="Philippines">Philippines</option>
+      </select><br><br>
+
+      <label for="Ay">Year of arrival in Australia:</label><br>
+      <input type="text" id="yearOfArrival" value="1999" required><br><br>
+
+      <label for="cite">Are you an Australian Citizen?</label><br>
+      <input type="radio" id="radBut" value="Yes">
+      <label for="radBut">Yes</label><br>
+      <input type="radio" id="radBut" value="No">
+      <label for="radBut">No</label>
+      <br><br>
+
+      <button type="button" onclick="InfoRev()">Help</button>
+      <button type="button" onclick="RevAddEdu(); incr()">Next</button>
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region LANGUAGE AND EDUCATION QUESTIONNAIRE -->
+    <section id="EngEdu" style="display: none;">
+      <h1 id="head">3. English Proficiency and Education</h1>
+      <hr>
+      <br>
+
+      <label for="cob">Do you speak a language other than English?</label><br>
+      <select id="cob" required>
+        <option value="Enlish Only">English Only</option>
+        <option value="Mandarin">Mandarin</option>
+        <option value="Italian">Italian</option>
+        <option value="Arabic">Arabic</option>
+        <option value="Cantonese">Cantonese</option>
+        <option value="Greek">Greek</option>
+      </select><br><br>
+
+      <label for="cob">How Well do you speak English?</label><br>
+      <select id="cob" required>
+        <option value="Very Well">Very Well</option>
+        <option value="Well">Well</option>
+        <option value="Not Well">Not Well</option>
+        <option value="Not at all">Not at All</option>
+      </select><br><br>
+
+      <label for="cob">What is the highest qualification you've received?</label><br>
+      <select id="cob" required>
+        <option value="High School Diploma">High School Diploma</option>
+        <option value="Trade Certificate">Trade Certificate</option>
+        <option value="Cert I">Cert I</option>
+        <option value="Cert II">Cert II</option>
+        <option value="Cert III">Cert III</option>
+        <option value="Cert IV">Cert IV</option>
+        <option value="Bachelor Degree">Bachelor Degree</option>
+        <option value="Associate Diploma">Associate Diploma</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Masters">Masters</option>
+        <option value="PhD">PhD</option>
+      </select><br><br>
+
+      <label for="Qual">What is the main field of study of your Highest Qualification?</label><br>
+      <input type="text" id="study" name="Study"  required><br><br>
+
+      <button type="button" onclick="EduRev()">Help</button>
+      <button type="button" onclick="RevAddDwe(); incr()">Next</button>
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region DWELLING QUESTIONNAIRE -->
+    <section id="Dwell" style="display: none;">
+      <h1 id="head">4. Information About Your Dwelling</h1>
+      <hr>
+      <br>
+
+      <label for="cob">What is the type of your dwelling?</label><br>
+      <select id="cob" required>
+        <option value="Detached House">Detached House</option>
+        <option value="Semi-detached House">Semi-detached House</option>
+        <option value="Retirement Village">Retirement Village</option>
+        <option value="Apartment">Apartment</option>
+        <option value="Caravan">Caravan</option>
+        <option value="Hosueboat">Hosueboat</option>
+        <option value="Boat">Boat</option>
+        <option value="Tent">Tent</option>
+      </select><br><br>
+
+      <label for="cob">Is this dwelling:</label><br>
+      <select id="cob" required>
+        <option value="Very Well">Owned outright</option>
+        <option value="Well">Owned with Morgage</option>
+        <option value="Not Well">Rented</option>
+        <option value="Not at all">Rent-free</option>
+      </select><br><br>
+
+      <label for="cob">What is the dwellings source of energy?</label><br>
+      <select id="cob" required>
+        <option value="Mains Electricity">Mains Electricity</option>
+        <option value="Photovoltaic Panels">Photovoltaic Panels</option>
+        <option value="Battery">Battery</option>
+        <option value="Gas">Gas</option>
+        <option value="No Power Source">No Power Source</option>
+      </select><br><br>
+
+      <label for="cob">What is the method of internet access for the dwelling?</label><br>
+      <select id="cob" required>
+        <option value="FttH">Fibre to the House</option>
+        <option value="FttC">Fibre to the Curb</option>
+        <option value="FttN">Fibre to the Node</option>
+        <option value="Fixed Wirelss">Fixed Wireless</option>
+        <option value="Mobile Broadband">Mobile Broadband</option>
+        <option value="No Internet">No Internet</option>
+      </select><br><br>
+
+      <label for="Qual">What is your average monthly internet downloads (in GB)?</label><br>
+      <input type="text" id="downloads" name="monthly" placeholder="69" required><br><br>
+
+      <label for="occupancy">How many bedrooms are in the dwelling?</label><br>
+      <select name="occupancy" id="occupied" form="occuform">
+        <option selected="selected">1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+      </select><br><br>
+
+      <label for="cite">Are there any eletric vehicles garaged at the dwelling?</label><br>
+      <input type="radio" id="radBut" value="Yes">
+      <label for="radBut">Yes</label><br>
+      <input type="radio" id="radBut" value="No">
+      <label for="radBut">No</label>
+      <br><br>
+
+      <label for="cob">If yes, what type?</label><br>
+      <select id="cob">
+        <option value="Car">Car</option>
+        <option value="hybrid-car">Hybrid-car</option>
+        <option value="SUV">SUV</option>
+        <option value="Hybrid-SUV">Hybrid-SUV</option>
+        <option value="Truck">Truck</option>
+        <option value="Hybrid-truck">Hybrid-truck</option>
+        <option value="Scooter">Scooter</option>
+        <option value="Motorcycle">Motorcycle</option>
+      </select><br><br>
+
+      <button type="button" onclick="DweRev()">Help</button>
+      <button type="button" onclick="RevAddFee(); incr()">Next</button>
+
+    </section>
+    <!-- #endregion -->
+
+    <!-- #region QUESTIONNAIRE FEEDBACK -->
+    <section id="Feedback" style="display: none;">
+      <h1 id="head">5. Questionnaire Feedback</h1>
+      <hr>
+      <br>
+
+      <label for="cob">How difficult was the queationnare to navigate?</label><br>
+      <select id="cob" required>
+        <option value="Very Easy">Very Easy</option>
+        <option value="Easy">Easy</option>
+        <option value="OK">OK</option>
+        <option value="Hard">Hard</option>
+        <option value="Very Hard">Very Hard</option>
+      </select><br><br>
+
+      <label for="cob">Were the questions clear or confusing?</label><br>
+      <select id="cob" required>
+        <option value="Very Clear">Very Clear</option>
+        <option value="Clear">Clear</option>
+        <option value="OK">OK</option>
+        <option value="Confusing">Confusing</option>
+        <option value="Very Confusing">Very Confusing</option>
+      </select><br><br>
+
+      <label for="cob">Did you need to use Help?</label><br>
+      <select id="cob" required>
+        <option value="Very Often">Very Often</option>
+        <option value="Often">Often</option>
+        <option value="Occansionally">Occansionally</option>
+        <option value="Never">Never</option>
+      </select><br><br>
+
+      <label for="radBut">Did need to use the Help?</label><br>
+      <input type="radio" id="radBut" value="Yes">
+      <label for="radBut">Yes</label><br>
+      <input type="radio" id="radBut" value="No">
+      <label for="radBut">No</label><br>
+      <input type="radio" id="radBut" value="Did Not Use">
+      <label for="radBut">Did Not Use</label>
+      <br><br>
+
+      <label for="Qual">Any more comments you want to make?</label><br>
+      <textarea id="comments" name="comments" rows="4" cols="50" placeholder="Put Them Here!"></textarea><br><br>
+
+    <button type="button" onclick="FeedRev();">Help</button>
+    <button type="submit" onclick="incr()">Submit</button>
+    </section>
+    <!-- #endregion -->
+
+    <!-- QUESTIONNAIRE HELP SECTIONS -->
+    <section id= help>
+      <h1 id="head">Help for Dwelling Address</h1>
+      <hr>
+      <br>
+      <p>Heres some text to help</p>
+    </section>
+    <section id= PerInfo>
+      <h1 id="head">Help for Personal Information</h1>
+      <hr>
+      <br>
+      <p>Heres some text to help</p>
+    </section>
+    <section id= Edu>
+      <h1 id="head">Help for Education</h1>
+      <hr>
+      <br>
+      <p>Heres some text to help</p>
+    </section>
+    <section id= DweInfo>
+      <h1 id="head">Help for Dwelling Information</h1>
+      <hr>
+      <br>
+      <p>Heres some text to help</p>
+    </section>
+    <section id= feed>
+      <h1 id="head">Help for Questionnaire Feedback</h1>
+      <hr>
+      <br>
+      <p>Heres some text to help</p>
+    </section>
+  </form>
+</body>
+
+
+
+
+</html>

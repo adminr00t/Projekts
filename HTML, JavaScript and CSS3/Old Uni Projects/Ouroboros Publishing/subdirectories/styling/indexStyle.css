@@ -1,0 +1,466 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+  font-weight: 25%;
+  text-decoration: none;
+}
+
+/* PAGE STRUCTURE */
+.navigation{
+  margin: 0;
+  padding: 0;
+  width: 125px;
+  background-color: rgba(242, 185, 63, 0.6);
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.navigation a{
+  display: block;
+  color: black;
+  padding: 8px;
+}
+
+.navigation a.active{
+  background-color: darkgoldenrod;
+  color: white;
+}
+
+.navigation a:hover:not(.active){
+  background-color: darkorange;
+  transition: 0.7s ease;
+}
+
+.logo img{
+  float: right;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 125px;
+  height: auto;
+}
+
+.intro{
+  position: absolute;
+  margin-left: 12%;
+  top: 25%;
+  padding: 1px 16px;
+  width: 85%;
+  height: 85%;
+  color: white;
+  display: inline-block;
+  word-wrap: break-word;
+}
+
+.intro a{
+  color: white;
+  text-decoration: underline;
+}
+
+/* LIST DESIGN */
+.intro ul{
+  padding-left: 2%;
+  list-style: none;
+}
+
+
+.intro ol{
+  padding-left: 2%;
+  list-style: decimal;
+}
+.intro h3{
+  text-decoration: underline;
+}
+
+.title{
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  width: 75%;
+  transform: translate(-50%, -50%);
+}
+
+.title h1{
+  color: white;
+  font-size: 50px;
+  font-style: italic;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* AUTHORS */
+.author1{
+  position: relative;
+  width: 125px;
+  left: 70%;
+  top: -63px
+}
+
+.author1Caption{
+  position: relative;
+  font-size: small;
+  width: fit-content;
+  left: 70%;
+  top: -7%;
+}
+
+.author2{
+  position: relative;
+  width: 125px;
+  left: 70%;
+  top: -63px
+}
+
+.author2Caption{
+  position: relative;
+  font-size: small;
+  width: fit-content;
+  left: 70%;
+  bottom: 7%;
+}
+
+.author3{
+  position: relative;
+  width: 125px;
+  left: 70%;
+  top: 9%;
+}
+
+.author3Caption{
+  position: relative;
+  font-size: small;
+  width: fit-content;
+  left: 70%;
+  bottom: 0%;
+}
+
+.backToDirectory{
+  position: absolute;
+  top: 96%;
+  left: 1%;
+  font-size: small;
+}
+
+/* BOOKS */
+.book1{
+  width: 150px;
+}
+
+.book1Caption{
+  font-size: small;
+  width: fit-content;
+  margin-right: 0%;
+}
+
+.book2{
+  position: relative;
+  width: 150px;
+  left: 200px;
+  bottom:250px;
+}
+
+.book2Caption{
+  position: relative;
+  font-size: small;
+  width: fit-content;
+  bottom:250px;
+  left: 200px;
+}
+
+.book3{
+  position: relative;
+  width: 150px;
+  left: 420px;
+  bottom: 500px;
+}
+
+.book3Caption{
+  font-size: small;
+  position: relative;
+  width: fit-content;
+  left: 420px;
+  bottom: 500px;
+}
+
+.book4{
+  position: relative;
+  width: 150px;
+  left: 620px;
+  bottom: 750px;
+}
+
+.book4Caption{
+  font-size: small;
+  position: relative;
+  width: fit-content;
+  left: 620px;
+  bottom: 750px;
+}
+
+/* For mobile/smaller screens */
+@media screen and (max-width: 800px) {
+  /* STRUCTURE */
+  .navigation {
+    width: 100%;
+    height: 37px;
+    position: relative;
+  }
+  .navigation a {
+    float: left;
+    text-align: center;
+  }
+
+  .intro{
+    position: absolute;
+    margin-left: 2%; 
+    top: 25%;
+    /* left: 5%; */
+    padding: 1px 16px;
+    width: 85%;
+    color: white;
+    display: inline-block;
+    word-wrap: break-all;
+  }
+
+  .logo img{ 
+    float: right;
+    position: relative;
+    top: 0px;
+    right: 0px;
+    width: 37px;
+    height: 37px;};
+  
+  .title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .title h1{
+    color: white;
+    font-size: 150%;
+    font-style: italic;
+    text-decoration: underline;
+  }
+
+  /*AUTHORS */
+  .backToDirectory{
+    position: relative;
+    bottom: 305px;
+    left: 1%;
+    font-size: small;
+  }
+
+  /* BOOKS & CAPTIONS */
+  .book1{
+    width: 150px;
+    left: 200px;
+  }
+  
+  .book1Caption{
+    font-size: small;
+    width: fit-content;
+    margin-right: 0%;
+  }
+  
+  .book2{
+    position: relative;
+    width: 150px;
+    left: 200px;
+    bottom:170px;
+  }
+  
+  .book2Caption{
+    position: relative;
+    font-size: small;
+    width: fit-content;
+    bottom:170px;
+    left: 200px;
+  }
+  
+  .book3{
+    position: relative;
+    width: 150px;
+    left: 2px;
+    bottom: 158px;
+  }
+  
+  .book3Caption{
+    font-size: small;
+    position: relative;
+    width: fit-content;
+    left: 1px;
+    top: -156px
+  }
+
+  .book4{
+    position: relative;
+    width: 150px;
+    left: 200px;
+    bottom: 326px;
+  }
+  
+  .book4Caption{
+    font-size: small;
+    position: relative;
+    width: fit-content;
+    left: 200px;
+    bottom: 324px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  /* STRUCTURE */
+  .navigation a {
+    text-align: center;
+    float: top;
+  }
+
+  .intro{
+    position: absolute;
+    display: inline-block;
+    word-wrap: break-all;
+    top: 25%;
+    width: 85%;
+  }
+
+  .intro p{
+    font-size: 75%;
+  }
+
+  .logo img{ 
+    width: 8.5%;
+    height: 8.5%;
+  };
+  
+  .title{
+    position: relative;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+ .title h1{
+    color: white;
+    font-size: 150%;
+    font-style: italic;
+    text-decoration: underline;
+    
+  }
+  
+  /* AUTHORS */
+  .author1{
+    position: relative;
+    width: 125px;
+    left: 65%;
+    top: -63px
+  }
+  
+  .author1Caption{
+    position: relative;
+    font-size: small;
+    width: fit-content;
+    left: 65%;
+    top: -7%;
+  }
+  
+  .author2{
+    position: relative;
+    width: 125px;
+    left: 65%;
+    top: -63px
+  }
+  
+  .author2Caption{
+    position: relative;
+    font-size: small;
+    width: fit-content;
+    left: 65%;
+    bottom: 7%;
+  }
+  
+  .author3{
+    position: relative;
+    width: 125px;
+    left: 65%;
+    top: 9%;
+  }
+  
+  .author3Caption{
+    position: relative;
+    font-size: small;
+    width: fit-content;
+    left: 65%;
+    bottom: 0%;
+  }
+  
+  .backToDirectory{
+    position: relative;
+    bottom: 305px;
+    left: 1%;
+    font-size: small;
+  }
+
+  /* BOOKS & CAPTIONS */
+  .book1{
+    width: 150px;
+    left: 200px;
+  }
+  
+  .book1Caption{
+    font-size: small;
+    width: fit-content;
+    margin-right: 0%;
+  }
+  
+  .book2{
+    position: relative;
+    width: 150px;
+    left: 178px;
+    bottom:170px;
+  }
+  
+  .book2Caption{
+    position: relative;
+    font-size: small;
+    width: fit-content;
+    bottom:170px;
+    left: 178px;
+  }
+  
+  .book3{
+    position: relative;
+    width: 150px;
+    left: 2px;
+    bottom: 158px;
+  }
+  
+  .book3Caption{
+    font-size: small;
+    position: relative;
+    width: fit-content;
+    left: 1px;
+    top: -156px
+  }
+
+  .book4{
+    position: relative;
+    width: 150px;
+    left: 178px;
+    bottom: 326px;
+  }
+  
+  .book4Caption{
+    font-size: small;
+    position: relative;
+    width: fit-content;
+    left: 178px;
+    bottom: 324px;
+  }
+}
+

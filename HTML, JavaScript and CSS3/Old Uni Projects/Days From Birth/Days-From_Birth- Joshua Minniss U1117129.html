@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <title>CSC1401 Assignment 1_Days-From-Birth</title>
+    <script>
+        //Created By Joshua Minniss, U1117129
+        //Constants- declares and intializes for use in later code
+        const msInSec = 1000;
+        const Sec = 60;
+        const hrInDay = 24;
+        const msInMin = msInSec * Sec; //1000*60
+        const msInHr = msInMin * Sec; // 1000*60*60
+        const OneDay = msInHr * hrInDay; // 1000*60*60*24
+
+        //Variables - declares placeholders for the users input
+        var BirthDay = '';
+        var BirthMonth = '';
+        var BirthYear = '';
+        var Today = new Date();
+        var ThisMonth = Today.getMonth();
+        var ThisYear = Today.getFullYear();
+        var username = '';
+        var YearsOld = '';
+
+        //Functional Birthday Code- replaces the placeholders variables with user input
+        username = prompt('Enter your name: ', 'Elliot');
+        BirthDay = parseInt(prompt('Enter Birth Day Only: ', '1-31'));
+        BirthMonthConfirmation = parseInt(prompt('Enter Birth Month Only: ', '1-12'));
+        BirthMonth = BirthMonthConfirmation - 1;
+        BirthYear = parseInt(prompt('Enter a Birth Year: ', 'e.g 1986'));
+
+        //Conformation- simply confirms correct birthdate
+        var Confirm = confirm('Is ' + BirthDay + "/" + BirthMonthConfirmation + "/" + BirthYear + ' the correct birth date?\n\n');
+
+        //Coalescence- brings together user input into an easy to read format and sets time to midnight
+        var BirthDate = new Date(BirthYear, BirthMonth, BirthDay);
+        var TrueBirthDate = BirthDate.setHours(0, 0, 0);
+        var TrueTodaysDate = Today.setHours(0, 0, 0);
+
+        //Maths- determines if the person is the correct age by months and days
+        const AmountOfDays = Math.floor((TrueTodaysDate - TrueBirthDate) / OneDay);
+        
+        if (ThisMonth < BirthMonthConfirmation) {
+            YearsOld = (Math.floor((ThisYear - BirthYear) - 1));
+        }else{
+            YearsOld= ThisYear - BirthYear;
+        }      
+
+        //Final Alert- tells user how many days since birth
+        alert(username + "'s birthday is: " + BirthDay + "/" + BirthMonthConfirmation + "/" 
+            + BirthYear + ", It was " + AmountOfDays + " Days Ago\n\n" + "They are " + YearsOld + " Years Old\n\n");
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
